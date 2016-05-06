@@ -1,0 +1,23 @@
+.card.card-info-outline
+    h4.card-title
+        .alert.alert-heading.alert-info Login
+
+    .card-block
+        form#login_form(ng-submit="root.login(login.mogul)")
+
+            .form-group
+                label.form-control-label(for="email") Email
+                input#email.form-control(type="email", ng-model="login.mogul.login", ams-auto-focus='', tabindex=0, required,autocomplete="off", placeholder="Login Email")
+
+            .form-group
+                label.form-control-label(for="password") Password
+                input#password.form-control(type="password", ng-model="login.mogul.password", tabindex=0, required,autocomplete="off", placeholder="Password")
+
+            .form-group.text-xs-right
+                a.btn.btn-info-outline(ui-sref="forgot-password") Forgot Password
+                button.btn.btn-info(type="submit") Login
+            .form-group.text-xs-right
+                .checkbox
+                    label.form-control-label
+                        input#rememberMe(type="checkbox", ng-model="login.mogul.remember")
+                        |Remember Me

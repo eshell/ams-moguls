@@ -1,0 +1,19 @@
+{
+  "name": "ams-v1",
+  "version": "0.0.1",
+  "description": "ams prototype",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-angular-templatecache": "^1.8.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "gulp-uncss": "^1.0.5",
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^0.3.8"
+  }
+}

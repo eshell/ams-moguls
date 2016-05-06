@@ -1,0 +1,37 @@
+a.list-group-item(data-toggle="collapse", href="#settings",data-parent="#account_accordion",aria-expanded="true") Settings
+.collapse.in#settings
+    ul.list-group
+        li.list-group-item
+            .row
+                .col-xs-12
+                    input(type="text", placeholder="City")
+                    input(type="text", placeholder="State")
+                    button set default
+            .row
+                .col-xs-6
+                    button.btn.btn-info.col-xs-12(data-toggle="modal", data-target="#dlgChangePassword") Change Password
+                    .modal.fade#dlgChangePassword(tabindex="-1", role="dialog", aria-hidden="true")
+                        .modal-dialog(role="document")
+                            .modal-content
+                                .modal-header
+                                    h4.modal-title Change Password
+                                .modal-body
+                                    .label.label-info If you change your password, you must re-log in.
+                                    .card
+                                        .card-block
+                                            form#change_password_form(ng-submit="account.settings.changePasswordForm.changePassword()")
+                                            .form-group.row
+                                                label.form-control-label(for="old_pass") Old Password
+                                                input#old_pass.form-control(type="password", ng-model="account.settings.changePasswordForm.oldPassword", ams-auto-focus, tabindex=0, required,autocomplete="off")
+
+                                            .form-group.row
+                                                label.form-control-label(for="new_pass") New Password
+                                                input#new_pass.form-control(type="password", ng-model="account.settings.changePasswordForm.newPassword", tabindex=0, required,autocomplete="off")
+                                            .form-group.row
+                                                label.form-control-label(for="new_pass2") Confirm New Password
+                                                input#new_pass2.form-control(type="password", ng-model="account.settings.changePasswordForm.newPassword2", tabindex=0, required,autocomplete="off")
+                                .modal-footer
+                                    button.btn.btn-secondary(data-dismiss="modal") Cancel
+                                    input.btn.btn-primary(ng-click="account.settings.changePasswordForm.changePassword()", type="submit", data-dismiss="modal", value="Update")
+                .col-xs-6
+                    button.btn.btn-info.col-xs-12(ng-click="account.settings.dlgChangeEmail()") Change Email/Login

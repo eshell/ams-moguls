@@ -1,0 +1,21 @@
+.card.card-info-outline
+    h4.card-title
+        .alert.alert-heading.alert-info Join Us Free!
+        .alert.alert-warning.
+            Payments are sent via paypal to the email address you provide here! If you don't have a paypal account,
+            go to <a href="https://www.paypal.com" target="_blank">www.paypal.com</a> to create a free account!
+    .card-block
+        form#register_form(ng-submit="register.register()")
+            .form-group
+                label.form-control-label(for="email") Email
+                input#email.form-control(type="email", ng-model="register.mogul.email", ams-auto-focus='', tabindex=0, required,autocomplete="off", placeholder="Your paypal associated email")
+
+            //.form-group
+            //    label.form-control-label(for="password") Password
+            //    input#password.form-control(type="password", ng-model="register.mogul.password", tabindex=0, required,autocomplete="off", placeholder="Password")
+            //.form-group
+            //    label.form-control-label(for="confirm") Confirm
+            //    input#confirm.form-control(type="password", ng-model="register.mogul.password2", tabindex=0, required,autocomplete="off", placeholder="Confirm Password")
+
+            .form-group.text-xs-right
+                button.btn.btn-info(type="submit", tabindex=1) Join!

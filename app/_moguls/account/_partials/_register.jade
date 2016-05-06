@@ -1,0 +1,30 @@
+a.list-group-item(data-toggle="collapse", href="#register",data-parent="#account_accordion",aria-expanded="true") Register New Member
+.collapse.in#register
+    ul.list-group
+        li.list-group-item.list-group-item-info
+            form#register_form(ng-submit="account.register()")
+                .form-group.row
+                    label.form-control-label(for="type") Type
+                    select#type.c-select.col-xs-12(ng-model="account.newMember.type", tabindex=0, required, ng-options="item as item.value for item in account.types track by item.id")
+
+                .form-group.row
+                    label.form-control-label(for="email") Email
+                    input#email.form-control(type="email", ng-model="account.newMember.email", ams-auto-focus, tabindex=0, required,autocomplete="off")
+
+                .form-group.row(ng-if="account.newMember.type.id === account.types[1].id")
+                    .form-group.col-xs-6
+                        label.form-control-label(for="address") Address
+                        input#address.form-control(type="text", ng-model="account.newMember.address", tabindex=0, required, autocomplete="off")
+                    .form-group.col-xs-6
+                        label.form-control-label(for="city") City
+                        input#city.form-control(type="text", ng-model="account.newMember.city", tabindex=0, required, autocomplete="off")
+                    .form-group.col-xs-6
+                        label.form-control-label(for="state") State
+                        input#state.form-control(type="text", minlength=2, maxlength=2, ng-model="account.newMember.state", tabindex=0, required, autocomplete="off")
+                    .form-group.col-xs-6
+                        label.form-control-label(for="zip") Zip
+                        input#zip.form-control(type="text", minlength=5, maxlength=5, ng-model="account.newMember.zip", tabindex=0, required, autocomplete="off")
+
+                .form-group.row.m-t-3
+                    button.btn.btn-info.col-xs-12(type="submit", tabindex=0) Send Registration Email
+

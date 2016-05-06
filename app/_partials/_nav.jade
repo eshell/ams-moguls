@@ -1,0 +1,13 @@
+nav.navbar.navbar-dark.bg-info(ng-if="!root.member.authorized", ng-cloak)
+    a.navbar-brand.col-xs-12.text-xs-center(ng-bind="root.title")
+    ul.nav.col-xs-12
+        li.nav-item.col-xs-6
+            a.btn.btn-info.col-xs-12(ui-sref="register") Register
+        li.nav-item.col-xs-6
+            a.btn.btn-info.col-xs-12(ui-sref="login") Login
+
+nav.navbar.navbar-dark.bg-info(ng-if="root.member.authorized")
+    a.navbar-brand {{root.title}}
+    ul.nav.pull-xs-right
+        li.nav-item.col-xs-6
+            a.btn.btn-info(ng-click="root.logout()") Logout

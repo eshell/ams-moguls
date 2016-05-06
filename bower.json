@@ -1,0 +1,16 @@
+{
+  "name": "olweg-moguls",
+  "description": "ams moguls",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "latest",
+    "a0-angular-storage": "latest",
+    "angular-jwt": "latest",
+    "angular-ui-router": "latest",
+    "bootstrap": "v4.0.0-alpha.2",
+    "font-awesome": "fontawesome#^4.6.1",
+    "moment": "^2.13.0",
+    "tether":"latest",
+    "toastr":"latest"
+  }
+}

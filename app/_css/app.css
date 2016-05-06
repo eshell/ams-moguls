@@ -1,0 +1,20 @@
+.input-error {
+    background: #f00;
+    color: #fff;
+    font-weight: bold;
+}
+.input-success {
+    background:#0c0;
+    font-weight:bold;
+    color:#fff;
+}
+[ng-cloak]{
+    display: none !important;
+}
+.needs-cursor{
+    cursor:pointer;
+}
+/* uncss:ignore */
+.ngclassstyle{
+    background: red;
+}
